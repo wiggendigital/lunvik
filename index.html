@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Lunvik | Heat pumps fitted in a day, across Agder</title>
+  <meta name="description" content="Lunvik fits air-to-air heat pumps in homes across Agder at a fixed price. Work out what you would save, see the prices, and book a free home visit.">
+  <meta name="theme-color" content="#f5f1ea">
+  <link rel="canonical" href="https://wiggendigital.github.io/lunvik/">
+  <link rel="alternate" hreflang="en" href="https://wiggendigital.github.io/lunvik/">
+  <link rel="alternate" hreflang="nb" href="https://wiggendigital.github.io/lunvik/no.html">
+  <link rel="alternate" hreflang="x-default" href="https://wiggendigital.github.io/lunvik/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Lunvik">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="Lunvik | Heat pumps fitted in a day, across Agder">
+  <meta property="og:description" content="Lunvik fits air-to-air heat pumps in homes across Agder at a fixed price. Work out what you would save, see the prices, and book a free home visit.">
+  <meta property="og:image" content="https://wiggendigital.github.io/lunvik/og-en.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Lunvik page: a headline about lower power bills beside a savings calculator.">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%231d3b31'/%3E%3Cpath d='M9 13.5c3-3 5.5 3 8.5 0s4-2.2 5.5-.7M9 19.5c3-3 5.5 3 8.5 0s4-2.2 5.5-.7' fill='none' stroke='%23f5f1ea' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400..700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="mark" viewBox="0 0 32 32">
+        <rect width="32" height="32" rx="9" fill="currentColor"/>
+        <path d="M9 13.5c3-3 5.5 3 8.5 0s4-2.2 5.5-.7M9 19.5c3-3 5.5 3 8.5 0s4-2.2 5.5-.7" fill="none" stroke="var(--mark-line, #f5f1ea)" stroke-width="2.4" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="check" viewBox="0 0 20 20">
+        <path d="M4.5 10.5l3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="arrow" viewBox="0 0 20 20">
+        <path d="M4 10h11M10.5 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top" id="top-bar">
+    <div class="wrap top__in">
+      <a class="brand" href="#top" aria-label="Lunvik, back to top">
+        <svg class="brand__mark" aria-hidden="true"><use href="#mark"/></svg>
+        <span>Lunvik</span>
+      </a>
+      <nav class="top__nav" aria-label="Sections">
+        <a href="#saving">Savings</a>
+        <a href="#process">How it works</a>
+        <a href="#prices">Prices</a>
+        <a href="#questions">Questions</a>
+      </nav>
+      <a class="top__lang" href="no.html" hreflang="nb" lang="nb" title="Les siden på norsk">Norsk</a>
+      <a class="btn btn--small" href="#book">Book a visit</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="hero" id="top">
+      <div class="wrap hero__in">
+        <div class="hero__copy">
+          <h1>A warmer house on a smaller power bill</h1>
+          <p class="hero__lede">Lunvik fits air-to-air heat pumps in homes across Agder. You get one fixed price that covers the pump and the fitting, and our own installers do the work in a day.</p>
+          <div class="hero__actions">
+            <a class="btn" href="#book">Book a free home visit</a>
+            <a class="link" href="#prices">See the prices <svg aria-hidden="true"><use href="#arrow"/></svg></a>
+          </div>
+          <dl class="facts">
+            <div><dt>1,240</dt><dd>pumps fitted since 2011</dd></div>
+            <div><dt>5 years</dt><dd>warranty on pump and fitting</dd></div>
+            <div><dt>F-gas</dt><dd>certified installers, all our own</dd></div>
+          </dl>
+        </div>
+
+        <form class="calc" id="saving" aria-labelledby="calc-title">
+          <h2 id="calc-title">What would you save?</h2>
+
+          <div class="field">
+            <div class="field__row">
+              <label for="kwh">Electricity you use in a year</label>
+              <output for="kwh" id="kwh-out">20,000&nbsp;kWh</output>
+            </div>
+            <input class="range" type="range" id="kwh" name="kwh" min="8000" max="40000" step="500" value="20000" aria-describedby="kwh-hint">
+            <p class="field__hint" id="kwh-hint">The figure is on your power bill and in your grid company&#39;s app.</p>
+          </div>
+
+          <div class="field">
+            <div class="field__row">
+              <label for="price">What you pay per kWh, grid rent included</label>
+              <output for="price" id="price-out">1.30&nbsp;kr</output>
+            </div>
+            <input class="range" type="range" id="price" name="price" min="0.6" max="3.0" step="0.05" value="1.3">
+          </div>
+
+          <fieldset class="seg">
+            <legend>How you heat today</legend>
+            <label><input type="radio" name="heat" value="electric" checked><span>Electricity only</span></label>
+            <label><input type="radio" name="heat" value="wood"><span>Electricity and a wood stove</span></label>
+          </fieldset>
+
+          <div class="result" aria-live="polite" aria-atomic="true">
+            <p class="result__main">
+              <span class="result__pre">About</span>
+              <strong><span id="save-out">6,200</span>&nbsp;kr</strong>
+              <span class="result__post">less to pay each year</span>
+            </p>
+            <div class="bars">
+              <div class="bar">
+                <span class="bar__label">Heating today</span>
+                <span class="bar__track"><i class="bar__fill bar__fill--today" id="bar-today" style="width:50.00%"></i></span>
+                <span class="bar__value"><span id="today-out">15,600</span>&nbsp;kr</span>
+              </div>
+              <div class="bar">
+                <span class="bar__label">With a heat pump</span>
+                <span class="bar__track"><i class="bar__fill bar__fill--pump" id="bar-pump" style="width:30.00%"></i></span>
+                <span class="bar__value"><span id="pump-out">9,400</span>&nbsp;kr</span>
+              </div>
+            </div>
+            <p class="result__payback" id="payback">The Standard package at 26,900 kr pays for itself in about 4.3 years.</p>
+          </div>
+
+          <details class="how">
+            <summary>How we work this out</summary>
+            <p id="how-text">We assume that 60% of your electricity goes to heating, that the pump takes over 60% of that heating, and that it gives 3 kWh of heat for each kWh it uses over a year. The home visit gives a figure for your house.</p>
+          </details>
+        </form>
+      </div>
+    </section>
+
+    <section class="process" id="process" aria-labelledby="process-title">
+      <div class="wrap process__in">
+        <div class="process__head">
+          <h2 id="process-title">From the first visit to a warm living room in about a week</h2>
+          <p>Most of that week is waiting for a free day in the calendar. The work itself takes an afternoon.</p>
+        </div>
+
+        <figure class="house" role="img" aria-label="Drawing of a house in winter. An outdoor unit on the wall is connected through the wall to an indoor unit, which warms the living room and the floor above.">
+          <svg viewBox="0 0 560 400" aria-hidden="true">
+            <defs>
+              <radialGradient id="warm" cx="255" cy="300" r="250" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#e8693c" stop-opacity=".62"/>
+                <stop offset=".45" stop-color="#e8693c" stop-opacity=".3"/>
+                <stop offset="1" stop-color="#e8693c" stop-opacity=".06"/>
+              </radialGradient>
+              <clipPath id="inside"><path d="M152 152 L290 66 L428 152 V352 H152Z"/></clipPath>
+            </defs>
+
+            <!-- Snow in the air -->
+            <g class="house__snow">
+              <circle cx="38" cy="58" r="2"/><circle cx="92" cy="118" r="1.6"/><circle cx="64" cy="196" r="2.2"/><circle cx="24" cy="262" r="1.6"/>
+              <circle cx="118" cy="38" r="1.6"/><circle cx="196" cy="34" r="2"/><circle cx="372" cy="30" r="1.6"/><circle cx="452" cy="72" r="2.2"/>
+              <circle cx="508" cy="132" r="1.6"/><circle cx="532" cy="48" r="2"/><circle cx="486" cy="224" r="2"/><circle cx="536" cy="286" r="1.6"/>
+              <circle cx="470" cy="312" r="1.6"/><circle cx="76" cy="318" r="1.6"/>
+            </g>
+
+            <!-- Warm air inside -->
+            <g clip-path="url(#inside)"><rect x="140" y="60" width="300" height="300" fill="url(#warm)"/></g>
+
+            <!-- Ground and drifts -->
+            <path class="house__ground" d="M0 352H560"/>
+            <path class="house__drift" d="M0 352c26-9 58-10 92-4 20 3 40 4 60 4zM428 352c30-3 44-12 74-11 24 1 40 6 58 11z"/>
+
+            <!-- House -->
+            <path class="house__line" d="M152 352V152M428 352V152"/>
+            <path class="house__roof" d="M128 167 L290 66 L452 167"/>
+            <path class="house__roofsnow" d="M150 148.5 L290 61 L430 148.5"/>
+            <path class="house__thin" d="M152 252H318M352 252H428"/>
+            <path class="house__thin" d="M352 103V76h22v41"/>
+
+            <!-- Upstairs: window, bed -->
+            <rect class="house__thin" x="262" y="166" width="56" height="50" rx="2"/>
+            <path class="house__thin" d="M290 166v50M262 191h56"/>
+            <path class="house__thin" d="M172 252v-36M172 238h76v14M179 238v-6a4 4 0 0 1 4-4h15a4 4 0 0 1 4 4v6"/>
+
+            <!-- Downstairs: sofa, window, door -->
+            <path class="house__thin" d="M207 326v-13a6 6 0 0 1 6-6h44a6 6 0 0 1 6 6v13"/>
+            <path class="house__thin" d="M197 344v-20a5 5 0 0 1 10 0v6h56v-6a5 5 0 0 1 10 0v20ZM203 344v8M267 344v8"/>
+            <rect class="house__thin" x="294" y="276" width="48" height="40" rx="2"/>
+            <path class="house__thin" d="M318 276v40"/>
+            <path class="house__thin" d="M374 352v-74h36v74M402 316v6"/>
+
+            <!-- Indoor unit and its air -->
+            <rect class="house__unit" x="160" y="264" width="62" height="19" rx="6"/>
+            <path class="house__thin" d="M168 277.5h46"/>
+            <g class="house__air">
+              <path d="M230 281c12 1 18 9 30 9s17-7 28-6"/>
+              <path d="M226 293c10 5 17 11 30 11s20-5 32-3"/>
+              <path d="M329 262c-4-9 4-13 0-22s4-13 0-22"/>
+              <path d="M342 262c-4-9 4-13 0-22s4-13 0-22"/>
+            </g>
+
+            <!-- Outdoor unit, bracket and pipe -->
+            <path class="house__pipe" d="M152 273.5H132a6 6 0 0 0-6 6V297"/>
+            <path class="house__thin" d="M152 337H98M152 350l-26-13"/>
+            <rect class="house__unit" x="96" y="297" width="50" height="38" rx="5"/>
+            <circle class="house__thin" cx="116" cy="316" r="11.5"/>
+            <path class="house__thin" d="M116 304.5v23M104.5 316h23M137 305v22"/>
+
+            <!-- Temperatures -->
+            <g class="house__temp">
+              <text x="22" y="224">Outside</text>
+              <text class="house__deg" x="22" y="250">−8°</text>
+              <text x="366" y="196">Inside</text>
+              <text class="house__deg" x="366" y="222">21°</text>
+            </g>
+          </svg>
+        </figure>
+
+        <ol class="steps">
+          <li>
+            <h3>The visit</h3>
+            <p class="steps__time">45 minutes</p>
+            <p>An installer comes to your home, measures the rooms and finds the best wall for the indoor and outdoor units. The visit is free, and you are not obliged to buy.</p>
+          </li>
+          <li>
+            <h3>The price</h3>
+            <p class="steps__time">Within two working days</p>
+            <p>You get one written price. It covers the pump, the fitting, pipes, brackets and VAT, and it does not change on the day.</p>
+          </li>
+          <li>
+            <h3>The fitting</h3>
+            <p class="steps__time">Four to six hours</p>
+            <p>Two installers put up both units, drill one hole through the outer wall and seal it. Before they leave, they show you the remote and the app.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="prices" id="prices" aria-labelledby="prices-title">
+      <div class="wrap">
+        <div class="head">
+          <h2 id="prices-title">Three packages, each with fitting included</h2>
+          <p>Every price covers the pump, a standard fitting and VAT. The home visit settles which package suits your house.</p>
+        </div>
+
+        <div class="packs">
+          <article class="pack" id="pack-compact">
+            <h3>Compact</h3>
+            <p class="pack__size">Up to 60 m²</p>
+            <p class="pack__price"><strong>21,900</strong>&nbsp;kr</p>
+            <p class="pack__suffix">fitted, VAT included</p>
+            <p class="pack__text">For flats, cabins and small houses with an open floor plan.</p>
+            <dl class="pack__specs">
+              <div><dt>Heat output</dt><dd>3.2 kW</dd></div>
+              <div><dt>Gives heat down to</dt><dd>−25 °C</dd></div>
+              <div><dt>Sound indoors, from</dt><dd>19 dB</dd></div>
+            </dl>
+          </article>
+          <article class="pack pack--chosen" id="pack-standard">
+            <p class="pack__note">The one most homes choose</p>
+            <h3>Standard</h3>
+            <p class="pack__size">60 to 120 m²</p>
+            <p class="pack__price"><strong>26,900</strong>&nbsp;kr</p>
+            <p class="pack__suffix">fitted, VAT included</p>
+            <p class="pack__text">For most detached and terraced houses.</p>
+            <dl class="pack__specs">
+              <div><dt>Heat output</dt><dd>4.5 kW</dd></div>
+              <div><dt>Gives heat down to</dt><dd>−25 °C</dd></div>
+              <div><dt>Sound indoors, from</dt><dd>19 dB</dd></div>
+            </dl>
+          </article>
+          <article class="pack" id="pack-large">
+            <h3>Large</h3>
+            <p class="pack__size">120 to 180 m²</p>
+            <p class="pack__price"><strong>33,900</strong>&nbsp;kr</p>
+            <p class="pack__suffix">fitted, VAT included</p>
+            <p class="pack__text">For large houses and open layouts over two floors.</p>
+            <dl class="pack__specs">
+              <div><dt>Heat output</dt><dd>6.0 kW</dd></div>
+              <div><dt>Gives heat down to</dt><dd>−25 °C</dd></div>
+              <div><dt>Sound indoors, from</dt><dd>21 dB</dd></div>
+            </dl>
+          </article>
+        </div>
+
+        <div class="extras">
+          <div class="extras__col">
+            <h3>In every package</h3>
+            <ul class="ticks">
+              <li><svg aria-hidden="true"><use href="#check"/></svg>A standard fitting with up to 4 metres of pipe</li>
+              <li><svg aria-hidden="true"><use href="#check"/></svg>A wall bracket for the outdoor unit</li>
+              <li><svg aria-hidden="true"><use href="#check"/></svg>Control from your phone</li>
+              <li><svg aria-hidden="true"><use href="#check"/></svg>A 5-year warranty on pump and fitting</li>
+              <li><svg aria-hidden="true"><use href="#check"/></svg>We take the old pump away</li>
+            </ul>
+          </div>
+          <div class="extras__col">
+            <h3>Extras, if your house needs them</h3>
+            <table class="extras__table">
+              <caption class="sr-only">Extras and their prices</caption>
+              <thead class="sr-only"><tr><th scope="col">Extra</th><th scope="col">Price</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Extra pipe, per metre</th><td>450 kr</td></tr>
+                <tr><th scope="row">A ground stand in place of the wall bracket</th><td>1,200 kr</td></tr>
+                <tr><th scope="row">A roof over the outdoor unit</th><td>1,900 kr</td></tr>
+                <tr><th scope="row">Service every second year</th><td>1,490 kr</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <p class="enova">Enova gives no support for air-to-air heat pumps, so the price you see here is the price you pay.</p>
+      </div>
+    </section>
+
+    <section class="case" id="case" aria-labelledby="case-title">
+      <div class="wrap case__in">
+        <div class="case__copy">
+          <h2 id="case-title">The winter after, for a family in Søgne</h2>
+          <p>Ingrid and Tor heated their 140 m² house from 1978 with panel heaters and a wood stove. In October 2024 we fitted a Standard pump in the living room.</p>
+          <p>From October to March they used 5,100 kWh less electricity than the winter before. At 1.30 kr per kWh, that is about 6,600 kr.</p>
+          <figure class="quote">
+            <blockquote><p>The landing upstairs used to be the cold part of the house. Now we leave the doors open and the whole floor is warm.</p></blockquote>
+            <figcaption>Ingrid, Søgne</figcaption>
+          </figure>
+        </div>
+
+        <figure class="chart" id="chart">
+          <figcaption>
+            <span class="chart__title">Electricity used each month, in kWh</span>
+            <span class="chart__legend">
+              <span><i class="key key--before"></i>Winter 2023–24</span>
+              <span><i class="key key--after"></i>Winter 2024–25</span>
+            </span>
+          </figcaption>
+          <svg class="chart__svg chart__svg--wide" viewBox="0 0 560 286" role="group" aria-label="Bar chart of the household's electricity use from October to March. Every month is lower in the winter after the heat pump was fitted; the total fell from 18,500 to 13,400 kWh."><g class="chart__grid"><path d="M46 183.5H552"/><path d="M46 127H552"/><path d="M46 70.5H552"/><path d="M46 14H552"/></g><g class="chart__axis" aria-hidden="true"><text x="38" y="244" text-anchor="end">0</text><text x="38" y="131" text-anchor="end">2,000</text><text x="38" y="18" text-anchor="end">4,000</text></g><rect class="chart__hit" data-i="0" data-peak="0.475" x="46" y="14" width="84.3333" height="226" tabindex="0" role="img" aria-label="October: 2,100 kWh, 1,500 kWh"/><rect class="chart__band" x="50" y="14" width="76.3333" height="226" rx="6" pointer-events="none"/><rect class="chart__hit" data-i="1" data-peak="0.275" x="130.333" y="14" width="84.3333" height="226" tabindex="0" role="img" aria-label="November: 2,900 kWh, 2,050 kWh"/><rect class="chart__band" x="134.333" y="14" width="76.3333" height="226" rx="6" pointer-events="none"/><rect class="chart__hit" data-i="2" data-peak="0.100" x="214.667" y="14" width="84.3333" height="226" tabindex="0" role="img" aria-label="December: 3,600 kWh, 2,700 kWh"/><rect class="chart__band" x="218.667" y="14" width="76.3333" height="226" rx="6" pointer-events="none"/><rect class="chart__hit" data-i="3" data-peak="0.025" x="299" y="14" width="84.3333" height="226" tabindex="0" role="img" aria-label="January: 3,900 kWh, 3,000 kWh"/><rect class="chart__band" x="303" y="14" width="76.3333" height="226" rx="6" pointer-events="none"/><rect class="chart__hit" data-i="4" data-peak="0.175" x="383.333" y="14" width="84.3333" height="226" tabindex="0" role="img" aria-label="February: 3,300 kWh, 2,400 kWh"/><rect class="chart__band" x="387.333" y="14" width="76.3333" height="226" rx="6" pointer-events="none"/><rect class="chart__hit" data-i="5" data-peak="0.325" x="467.667" y="14" width="84.3333" height="226" tabindex="0" role="img" aria-label="March: 2,700 kWh, 1,750 kWh"/><rect class="chart__band" x="471.667" y="14" width="76.3333" height="226" rx="6" pointer-events="none"/><g pointer-events="none" aria-hidden="true"><path class="chart__before" d="M60.1667 240V125.35a4 4 0 0 1 4-4h19a4 4 0 0 1 4 4V240Z"/><path class="chart__after" d="M89.1667 240V159.25a4 4 0 0 1 4-4h19a4 4 0 0 1 4 4V240Z"/><path class="chart__before" d="M144.5 240V80.15a4 4 0 0 1 4-4h19a4 4 0 0 1 4 4V240Z"/><path class="chart__after" d="M173.5 240V128.175a4 4 0 0 1 4-4h19a4 4 0 0 1 4 4V240Z"/><path class="chart__before" d="M228.833 240V40.6a4 4 0 0 1 4-4h19a4 4 0 0 1 4 4V240Z"/><path class="chart__after" d="M257.833 240V91.45a4 4 0 0 1 4-4h19a4 4 0 0 1 4 4V240Z"/><path class="chart__before" d="M313.167 240V23.65a4 4 0 0 1 4-4h19a4 4 0 0 1 4 4V240Z"/><path class="chart__after" d="M342.167 240V74.5a4 4 0 0 1 4-4h19a4 4 0 0 1 4 4V240Z"/><path class="chart__before" d="M397.5 240V57.55a4 4 0 0 1 4-4h19a4 4 0 0 1 4 4V240Z"/><path class="chart__after" d="M426.5 240V108.4a4 4 0 0 1 4-4h19a4 4 0 0 1 4 4V240Z"/><path class="chart__before" d="M481.833 240V91.45a4 4 0 0 1 4-4h19a4 4 0 0 1 4 4V240Z"/><path class="chart__after" d="M510.833 240V145.125a4 4 0 0 1 4-4h19a4 4 0 0 1 4 4V240Z"/></g><path class="chart__base" d="M46 240H552"/><g class="chart__axis" aria-hidden="true"><text x="88.1667" y="262" text-anchor="middle">Oct</text><text x="172.5" y="262" text-anchor="middle">Nov</text><text x="256.833" y="262" text-anchor="middle">Dec</text><text x="341.167" y="262" text-anchor="middle">Jan</text><text x="425.5" y="262" text-anchor="middle">Feb</text><text x="509.833" y="262" text-anchor="middle">Mar</text></g></svg><svg class="chart__svg chart__svg--narrow" viewBox="0 0 320 250" role="group" aria-label="Bar chart of the household's electricity use from October to March. Every month is lower in the winter after the heat pump was fitted; the total fell from 18,500 to 13,400 kWh."><g class="chart__grid"><path d="M36 159H318"/><path d="M36 110H318"/><path d="M36 61H318"/><path d="M36 12H318"/></g><g class="chart__axis" aria-hidden="true"><text x="28" y="212" text-anchor="end">0</text><text x="28" y="114" text-anchor="end">2,000</text><text x="28" y="16" text-anchor="end">4,000</text></g><rect class="chart__hit" data-i="0" data-peak="0.475" x="36" y="12" width="47" height="196" tabindex="0" role="img" aria-label="October: 2,100 kWh, 1,500 kWh"/><rect class="chart__band" x="40" y="12" width="39" height="196" rx="6" pointer-events="none"/><rect class="chart__hit" data-i="1" data-peak="0.275" x="83" y="12" width="47" height="196" tabindex="0" role="img" aria-label="November: 2,900 kWh, 2,050 kWh"/><rect class="chart__band" x="87" y="12" width="39" height="196" rx="6" pointer-events="none"/><rect class="chart__hit" data-i="2" data-peak="0.100" x="130" y="12" width="47" height="196" tabindex="0" role="img" aria-label="December: 3,600 kWh, 2,700 kWh"/><rect class="chart__band" x="134" y="12" width="39" height="196" rx="6" pointer-events="none"/><rect class="chart__hit" data-i="3" data-peak="0.025" x="177" y="12" width="47" height="196" tabindex="0" role="img" aria-label="January: 3,900 kWh, 3,000 kWh"/><rect class="chart__band" x="181" y="12" width="39" height="196" rx="6" pointer-events="none"/><rect class="chart__hit" data-i="4" data-peak="0.175" x="224" y="12" width="47" height="196" tabindex="0" role="img" aria-label="February: 3,300 kWh, 2,400 kWh"/><rect class="chart__band" x="228" y="12" width="39" height="196" rx="6" pointer-events="none"/><rect class="chart__hit" data-i="5" data-peak="0.325" x="271" y="12" width="47" height="196" tabindex="0" role="img" aria-label="March: 2,700 kWh, 1,750 kWh"/><rect class="chart__band" x="275" y="12" width="39" height="196" rx="6" pointer-events="none"/><g pointer-events="none" aria-hidden="true"><path class="chart__before" d="M40.5 208V109.1a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4V208Z"/><path class="chart__after" d="M60.5 208V138.5a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4V208Z"/><path class="chart__before" d="M87.5 208V69.9a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4V208Z"/><path class="chart__after" d="M107.5 208V111.55a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4V208Z"/><path class="chart__before" d="M134.5 208V35.6a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4V208Z"/><path class="chart__after" d="M154.5 208V79.7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4V208Z"/><path class="chart__before" d="M181.5 208V20.9a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4V208Z"/><path class="chart__after" d="M201.5 208V65a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4V208Z"/><path class="chart__before" d="M228.5 208V50.3a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4V208Z"/><path class="chart__after" d="M248.5 208V94.4a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4V208Z"/><path class="chart__before" d="M275.5 208V79.7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4V208Z"/><path class="chart__after" d="M295.5 208V126.25a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4V208Z"/></g><path class="chart__base" d="M36 208H318"/><g class="chart__axis" aria-hidden="true"><text x="59.5" y="228" text-anchor="middle">Oct</text><text x="106.5" y="228" text-anchor="middle">Nov</text><text x="153.5" y="228" text-anchor="middle">Dec</text><text x="200.5" y="228" text-anchor="middle">Jan</text><text x="247.5" y="228" text-anchor="middle">Feb</text><text x="294.5" y="228" text-anchor="middle">Mar</text></g></svg>
+          <p class="chart__total">The six months together: 18,500 kWh before and 13,400 kWh after.</p>
+          <div class="chart__tip" id="chart-tip" hidden></div>
+          <div class="sr-only">
+          <table>
+            <caption>Electricity used each month, in kWh</caption>
+            <thead><tr><th scope="col">Month</th><th scope="col">Winter 2023–24</th><th scope="col">Winter 2024–25</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">October</th><td>2,100</td><td>1,500</td></tr>
+              <tr><th scope="row">November</th><td>2,900</td><td>2,050</td></tr>
+              <tr><th scope="row">December</th><td>3,600</td><td>2,700</td></tr>
+              <tr><th scope="row">January</th><td>3,900</td><td>3,000</td></tr>
+              <tr><th scope="row">February</th><td>3,300</td><td>2,400</td></tr>
+              <tr><th scope="row">March</th><td>2,700</td><td>1,750</td></tr>
+            </tbody>
+          </table>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="faq" id="questions" aria-labelledby="faq-title">
+      <div class="wrap faq__in">
+        <div class="faq__head">
+          <h2 id="faq-title">Questions we often get before a visit</h2>
+          <p>If yours is missing, write it in the form below and the installer will answer it when we call.</p>
+        </div>
+        <div class="faq__list">
+          <details open>
+            <summary><span>How loud is it?</span><i aria-hidden="true"></i></summary>
+            <p>The indoor unit runs at 19 dB on its lowest setting, which is quieter than a whisper. The outdoor unit sounds about like a fridge when you stand beside it. We place it away from bedroom windows, both yours and your neighbour&#39;s.</p>
+          </details>
+          <details>
+            <summary><span>Does it work when it is really cold?</span><i aria-hidden="true"></i></summary>
+            <p>Yes. All three models are built for Nordic winters and give heat down to −25 °C. They give less heat per kWh on the coldest days, so keep your panel heaters as a back-up.</p>
+          </details>
+          <details>
+            <summary><span>Can I get support from Enova?</span><i aria-hidden="true"></i></summary>
+            <p>No. Enova gives no support for air-to-air heat pumps. Some other heating systems do qualify, and Enova&#39;s website lists them.</p>
+          </details>
+          <details>
+            <summary><span>How long does a heat pump last?</span><i aria-hidden="true"></i></summary>
+            <p>Twelve to fifteen years with a service every second year. A service takes an hour and costs 1,490 kr.</p>
+          </details>
+          <details>
+            <summary><span>Can it cool the house in summer?</span><i aria-hidden="true"></i></summary>
+            <p>Yes. The same pump cools in summer, and it dries the air on damp days.</p>
+          </details>
+          <details>
+            <summary><span>Do I need to be home during the fitting?</span><i aria-hidden="true"></i></summary>
+            <p>Only at the start and towards the end. We agree on where the units go when we arrive, and we show you how everything works before we leave.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="book" id="book" aria-labelledby="book-title">
+      <div class="wrap">
+        <div class="book__panel">
+          <div class="book__copy">
+            <h2 id="book-title">Book a free home visit</h2>
+            <p>Leave your name and number, and we will call you within one working day to agree a time.</p>
+            <ul class="ticks ticks--light">
+              <li><svg aria-hidden="true"><use href="#check"/></svg>The visit takes about 45 minutes and costs nothing</li>
+              <li><svg aria-hidden="true"><use href="#check"/></svg>You are not obliged to buy</li>
+              <li><svg aria-hidden="true"><use href="#check"/></svg>Evening and Saturday visits at no extra charge</li>
+            </ul>
+          </div>
+
+          <div class="book__card">
+            <form class="form" id="book-form" novalidate>
+              <div class="form__field">
+                <label for="f-name">Name</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+                <p class="form__error" id="e-name" hidden></p>
+              </div>
+              <div class="form__pair">
+                <div class="form__field">
+                  <label for="f-phone">Phone</label>
+                  <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required aria-describedby="e-phone">
+                  <p class="form__error" id="e-phone" hidden></p>
+                </div>
+                <div class="form__field">
+                  <label for="f-post">Postcode</label>
+                  <input id="f-post" name="postcode" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="4" required aria-describedby="e-post h-post">
+                  <p class="form__error" id="e-post" hidden></p>
+                  <p class="form__hint" id="h-post" hidden></p>
+                </div>
+              </div>
+              <div class="form__field">
+                <label for="f-home">Type of home</label>
+                <select id="f-home" name="home">
+                  <option>Detached house</option>
+                  <option>Terraced or semi-detached house</option>
+                  <option>Flat</option>
+                  <option>Cabin</option>
+                </select>
+              </div>
+              <fieldset class="seg seg--form">
+                <legend>When does a visit suit you?</legend>
+                <label><input type="radio" name="when" value="Daytime" checked><span>Daytime</span></label>
+                <label><input type="radio" name="when" value="After 4 pm"><span>After 4 pm</span></label>
+                <label><input type="radio" name="when" value="Saturday"><span>Saturday</span></label>
+              </fieldset>
+              <div class="form__field">
+                <label for="f-note">Anything we should know? <span class="form__opt">(optional)</span></label>
+                <textarea id="f-note" name="note" rows="3"></textarea>
+              </div>
+              <div class="form__trap" aria-hidden="true">
+                <label for="f-company">Company</label>
+                <input id="f-company" name="company" type="text" tabindex="-1" autocomplete="off">
+              </div>
+              <button class="btn btn--wide" type="submit">Ask for a visit</button>
+              <p class="form__privacy">We use your details only to arrange the visit.</p>
+            </form>
+            <div class="done" id="book-done" tabindex="-1" hidden>
+              <svg class="done__icon" aria-hidden="true"><use href="#check"/></svg>
+              <h3 id="done-title"></h3>
+              <p id="done-text"></p>
+              <p class="done__sample" id="done-sample"></p>
+              <button class="link link--button" type="button" id="done-again"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__in">
+      <div class="foot__brand">
+        <a class="brand" href="#top" aria-label="Lunvik, back to top">
+          <svg class="brand__mark" aria-hidden="true"><use href="#mark"/></svg>
+          <span>Lunvik</span>
+        </a>
+        <p>Heat pumps for homes in Agder, fitted by our own installers.</p>
+      </div>
+      <nav class="foot__nav" aria-label="Footer">
+        <a href="#saving">Savings</a>
+        <a href="#process">How it works</a>
+        <a href="#prices">Prices</a>
+        <a href="#questions">Questions</a>
+        <a href="#book">Book a visit</a>
+        <a href="no.html" hreflang="nb" lang="nb">Norsk</a>
+      </nav>
+      <p class="foot__sample">Sample project. Lunvik is a fictional company. The page was designed and built by Wiggen Digital.</p>
+    </div>
+  </footer>
+
+  <script type="application/json" id="page-data">{"locale":"en-US","model":{"kwh":{"min":8000,"max":40000,"step":500,"start":20000},"price":{"min":0.6,"max":3.0,"step":0.05,"start":1.3},"heatShare":{"electric":0.6,"wood":0.5},"cover":0.6,"scop":3.0,"packages":[{"id":"compact","upto":14000,"price":21900},{"id":"standard","upto":26000,"price":26900},{"id":"large","upto":1000000000,"price":33900}],"postcodes":[4400,4999]},"text":{"payback":"The {pkg} package at {price} kr pays for itself in about {years} years.","how":"We assume that {share}% of your electricity goes to heating, that the pump takes over 60% of that heating, and that it gives 3 kWh of heat for each kWh it uses over a year. The home visit gives a figure for your house.","pkg":{"compact":"Compact","standard":"Standard","large":"Large"},"errName":"Please enter your name.","errPhone":"Please enter a phone number with eight digits.","errPost":"Please enter a postcode with four digits.","postIn":"We cover your area.","postOut":"That is outside Agder. Send the form anyway, and we will tell you what we can do.","doneTitle":"Thank you, {name}.","doneText":"We will call you on {phone} within one working day.","doneSample":"This is a sample page, so nothing was sent.","doneAgain":"Fill in the form again","tipSaved":"{n} kWh saved"},"chart":{"before":"Winter 2023–24","after":"Winter 2024–25","rows":[{"month":"October","before":2100,"after":1500},{"month":"November","before":2900,"after":2050},{"month":"December","before":3600,"after":2700},{"month":"January","before":3900,"after":3000},{"month":"February","before":3300,"after":2400},{"month":"March","before":2700,"after":1750}]}}</script>
+</body>
+</html>
